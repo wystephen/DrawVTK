@@ -3,14 +3,12 @@ project(DrawVTK)
 
 set(CMAKE_CXX_STANDARD 11)
 
-#find_package(VTK REQUIRED)
+set(VTK_DIR /home/steve/Downloads/VTK-8.1.0/build/)
+find_package(VTK REQUIRED)
 
 #include(${VTK_USE_FILE})
-
-
-
-include_directories(
-        /home/steve/anaconda3/include/vtk-7.1/
+include(
+        ${VTK_USE_FILE}
 )
 
 link_directories(

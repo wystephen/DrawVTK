@@ -36,6 +36,7 @@
 #include <vtkRenderWindowInteractor.h>
 #include <vtkRenderer.h>
 #include <vtkTable.h>
+#include <vtkAutoInit.h>
 
 int main(int, char*[])
 {
@@ -121,6 +122,9 @@ int main(int, char*[])
     view->GetRenderWindow()->SetMultiSamples(0);
     view->GetInteractor()->Initialize();
     view->GetInteractor()->Start();
+
+    double a(0);
+    std::cin>>a;
 
     return EXIT_SUCCESS;
 }
